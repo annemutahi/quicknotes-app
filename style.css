@@ -105,6 +105,19 @@ button:focus-visible {
   outline-offset: 3px;
 }
 
+#clear-all-button {
+  min-height: 2.4rem;
+  margin: 0 0 1rem;
+  border: 1px solid #a3352b;
+  color: #8b2b24;
+  background: #fffefa;
+}
+
+#clear-all-button:hover {
+  color: #fffefa;
+  background: #a3352b;
+}
+
 #error-message {
   min-height: 1.25rem;
   margin: 0;
