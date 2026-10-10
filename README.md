@@ -13,7 +13,8 @@ Quick Notes is a lightweight browser-based note-taking app for capturing short n
 
 ## Run Locally
 
-The project has no build step or dependencies. From the project directory, start Python's built-in web server:
+The project has no build step or dependencies. 
+Install live server and use it to run the project.
 
 
 ## What I Learned
