@@ -1,0 +1,180 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+  color: #202d2a;
+  background: #f4f5ed;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #f4f5ed;
+}
+
+header {
+  padding: 1.5rem max(1.5rem, calc((100vw - 68rem) / 2));
+  color: #f8f7ef;
+  background: #245447;
+  border-bottom: 5px solid #e5a64d;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.65rem;
+}
+
+main {
+  width: min(100% - 3rem, 68rem);
+  margin: 2.5rem auto;
+  flex: 1;
+  display: grid;
+  grid-template-columns: minmax(15rem, 0.8fr) minmax(0, 1.2fr);
+  align-items: start;
+  gap: 3rem;
+}
+
+section {
+  min-width: 0;
+}
+
+section h2 {
+  margin: 0 0 1.25rem;
+  color: #245447;
+  font-size: 1.25rem;
+}
+
+#note-form {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.7rem;
+}
+
+label {
+  font-weight: 700;
+  font-size: 0.9rem;
+}
+
+input,
+select {
+  width: 100%;
+  min-height: 2.8rem;
+  padding: 0.65rem 0.75rem;
+  border: 1px solid #aab8ad;
+  border-radius: 4px;
+  color: #202d2a;
+  background: #fffefa;
+  font: inherit;
+}
+
+input:focus,
+select:focus {
+  outline: 3px solid #e5a64d;
+  outline-offset: 2px;
+}
+
+button {
+  min-height: 2.8rem;
+  margin-top: 0.45rem;
+  padding: 0.65rem 1rem;
+  border: 0;
+  border-radius: 4px;
+  color: #fffefa;
+  background: #245447;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 150ms ease, transform 150ms ease;
+}
+
+button:hover {
+  background: #173d33;
+  transform: translateY(-1px);
+}
+
+button:focus-visible {
+  outline: 3px solid #e5a64d;
+  outline-offset: 3px;
+}
+
+#error-message {
+  min-height: 1.25rem;
+  margin: 0;
+  color: #a3352b;
+}
+
+#search-input {
+  margin-bottom: 1rem;
+}
+
+#note-count {
+  margin: 0 0 0.75rem;
+  color: #52645d;
+  font-size: 0.9rem;
+}
+
+#notes-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.note-card {
+  margin: 0;
+  padding: 1rem 1.1rem;
+  border: 1px solid #cbd2c9;
+  border-left-width: 5px;
+  border-radius: 6px;
+  background: #fffefa;
+  overflow-wrap: anywhere;
+}
+
+.note-card.category-personal {
+  border-left-color: #39816b;
+  background: #edf6f0;
+}
+
+.note-card.category-work {
+  border-left-color: #5276a2;
+  background: #eef3f9;
+}
+
+.note-card.category-ideas {
+  border-left-color: #d28b2f;
+  background: #fff4df;
+}
+
+footer {
+  padding: 1rem 1.5rem;
+  color: #e7eee8;
+  background: #202d2a;
+  text-align: center;
+}
+
+footer p {
+  margin: 0;
+  font-size: 0.85rem;
+}
+
+@media (max-width: 600px) {
+  header {
+    padding: 1.25rem 1rem;
+  }
+
+  main {
+    width: min(100% - 2rem, 34rem);
+    margin: 1.5rem auto;
+    grid-template-columns: minmax(0, 1fr);
+    gap: 2rem;
+  }
+}
